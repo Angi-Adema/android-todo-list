@@ -1,3 +1,4 @@
+// Create the Room entity defining the structure of the stored data using Android Developers Documentation
 package com.coursework.todolist.data
 
 import androidx.room.Entity

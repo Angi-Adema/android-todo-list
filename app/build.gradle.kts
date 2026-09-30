@@ -2,7 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.compose)
 
-    // Plugin taken from Gradle docs
+    // KSP plugin referenced through Gradle Version Catalog
     alias(libs.plugins.ksp)
 }
 
@@ -55,7 +55,7 @@ dependencies {
     debugImplementation(libs.androidx.compose.ui.test.manifest)
     debugImplementation(libs.androidx.compose.ui.tooling)
 
-    // Dependencies taken from Gradle Docs
+    // Room dependencies referenced through Gradle Version Catalog
     implementation(libs.androidx.room.runtime)
     implementation(libs.androidx.room.ktx)
     ksp(libs.androidx.room.compiler)
