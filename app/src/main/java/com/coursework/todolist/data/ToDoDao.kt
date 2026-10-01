@@ -1,4 +1,4 @@
-// Create the Room DAO interface defining database operations using Android Developers documentation
+// Create the Room DAO interface defining database operations using Android Developers Codelabs docs
 package com.coursework.todolist.data
 
 import androidx.room.Dao

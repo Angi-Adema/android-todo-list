@@ -1,4 +1,5 @@
-// Create a container to hold the dependencies required for the application
+// Create a container to hold the dependencies required for the application. Built referencing Android
+// developers Add repository and Manual DI documentation (Create an application container)
 package com.coursework.todolist.data
 
 import android.content.Context
