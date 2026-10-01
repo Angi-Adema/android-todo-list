@@ -33,7 +33,6 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.layout.size
 import androidx.compose.ui.Alignment
 
 class MainActivity : ComponentActivity() {
@@ -102,9 +101,13 @@ fun ToDoScreen(
             items(toDoUiState.toDoList) { task ->
                 Row(
                     modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.SpaceBetween
+                    horizontalArrangement = Arrangement.SpaceBetween,
+                    verticalAlignment = Alignment.CenterVertically
                 ) {
-                    Row {
+                    Row(
+                        modifier = Modifier.weight(1f),
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
                         Checkbox(
                             checked = task.isCompleted,
                             onCheckedChange = { isChecked ->
@@ -113,9 +116,11 @@ fun ToDoScreen(
                                 )
                             }
                         )
+                        Spacer(modifier = Modifier.width(8.dp))
 
-                        Text(text = task.title)
+                        Text(text = task.title, modifier = Modifier.weight(1f))
                     }
+                    Spacer(modifier = Modifier.width(8.dp))
 
                     Button(
                         onClick = {
